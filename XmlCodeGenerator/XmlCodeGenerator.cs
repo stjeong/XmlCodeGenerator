@@ -25,7 +25,6 @@ namespace BclExtension
     ///     This class exists to be cocreated a in a preprocessor build step.
     /// </summary>
     [Guid(XmlCodeGenerator.RefGuid)]
-    [ComVisible(true)]
     [ClassInterface(ClassInterfaceType.None)]
     [CodeGeneratorRegistration(typeof(XmlCodeGenerator), "C# XML Code Generator", vsContextGuids.vsContextGuidVCSProject, GeneratesDesignTimeSource = true)]
     [CodeGeneratorRegistration(typeof(XmlCodeGenerator), "VB XML Code Generator", vsContextGuids.vsContextGuidVBProject, GeneratesDesignTimeSource = true)]
@@ -98,7 +97,7 @@ namespace BclExtension
                 {
                     xslt = new XslCompiledTransform();
 
-                    using (StringReader sr = new StringReader(xsltText))
+                    StringReader sr = new StringReader(xsltText);
                     using (XmlReader xr = XmlReader.Create(sr))
                     {
                         xslt.Load(xr, xst, null);
@@ -122,7 +121,7 @@ namespace BclExtension
 
                 XmlReaderSettings xrs = new XmlReaderSettings();
 
-                using (XmlWriter writer = XmlTextWriter.Create(sw, xws))
+                XmlWriter writer = XmlTextWriter.Create(sw, xws);
                 using (XmlReader reader = XmlReader.Create(xmlFilePath, xrs))
                 {
                     XsltArgumentList xal = new XsltArgumentList();
