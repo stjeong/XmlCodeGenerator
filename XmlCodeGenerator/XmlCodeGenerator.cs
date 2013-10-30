@@ -227,7 +227,15 @@ namespace BclExtension
         {
             if (codeDomProvider == null)
             {
+<<<<<<< HEAD
                 // Query for IVSMDCodeDomProvider/SVSMDCodeDomProvider for this project type
+=======
+<<<<<<< HEAD
+                // Query for IVSMDCodeDomProvider/SVSMDCodeDomProvider for this project type
+=======
+                //Query for IVSMDCodeDomProvider/SVSMDCodeDomProvider for this project type
+>>>>>>> 66f44e259b11485dedc0f037d22407a5da7998a9
+>>>>>>> ff0fefe99c520ad0f7aedfbc47648dc721df6429
                 Microsoft.VisualStudio.Designer.Interfaces.IVSMDCodeDomProvider provider = GetService(typeof(SVSMDCodeDomProvider))
                     as Microsoft.VisualStudio.Designer.Interfaces.IVSMDCodeDomProvider;
 
