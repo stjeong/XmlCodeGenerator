@@ -15,7 +15,7 @@ XmlCodeGenerator: http://visualstudiogallery.msdn.microsoft.com/20163975-c675-4f
 Change Log
 ================================
 
-1.0 - Sep 21, 2013
+1.0 - Oct 31, 2013
 
 * Initial checked-in
 
