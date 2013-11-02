@@ -8,8 +8,7 @@ Download
 ================================
 This extension is registered in Visual Studio Gallery. So you can download and install in Visual Studio Extension Manager.
 
-XmlCodeGenerator 
-; http://visualstudiogallery.msdn.microsoft.com/20163975-c675-4f1c-986f-d2489136469d
+XmlCodeGenerator: http://visualstudiogallery.msdn.microsoft.com/20163975-c675-4f1c-986f-d2489136469d
 
 
 
