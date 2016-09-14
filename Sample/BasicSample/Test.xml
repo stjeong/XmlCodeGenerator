@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<IFs>
+    <DOIT condition="1" />
+    <DOIT condition="2" />
+    <DOIT condition="3" />
+    <DOIT condition="4" />
+    <DOIT condition="5" />
+</IFs>
