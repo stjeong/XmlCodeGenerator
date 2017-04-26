@@ -1,7 +1,7 @@
 What is it?
 ================================
 
-Visual Studio 2012/2013 plugin: Generates source codes with XML + XSLT(includes pre-defined XSLT)
+Visual Studio 2012/2013/2015 plugin: Generates source codes with XML + XSLT(includes pre-defined XSLT)
 
 
 Download
