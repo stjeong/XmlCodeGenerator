@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F5CA69FE-6A86-4EB4-9909-047EA1988DE4}"
 	ProjectSection(SolutionItems) = preProject
@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlCodeGenerator", "XmlCodeGenerator\XmlCodeGenerator.csproj", "{622F3DB9-67C7-4E31-86CD-F4C2F3865E3D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{C6A0F6E1-0C61-4D8B-97D9-ED4175B839C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlCodeGenerator", "XmlCodeGenerator\XmlCodeGenerator.csproj", "{622F3DB9-67C7-4E31-86CD-F4C2F3865E3D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSample", "Sample\BasicSample\BasicSample.csproj", "{5CE76AC7-3DBF-459D-A4B0-B495406F6CB2}"
 EndProject
@@ -35,5 +35,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5CE76AC7-3DBF-459D-A4B0-B495406F6CB2} = {C6A0F6E1-0C61-4D8B-97D9-ED4175B839C5}
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 24cb72a6-a712-44f9-aeca-ba49f77b2904
 	EndGlobalSection
 EndGlobal
