@@ -16,14 +16,21 @@ Change Log
 ================================
 
 1.0 - Oct 31, 2013
-
 * Initial checked-in
 
+1.1 
+* Add support for Visual Studio 2015
+
+1.2
+* Add support for Visual Studio 2017
+
+1.3 - Feb 14, 2019
+* Add support for Visual Studio 2019 (Preview)
 
 
 License
 ================================
-OfficeController for Windows Phone, OfficePresenter for Android Copyright (C) 2013 SeongTae Jeong
+XmlCodeGenerator (C) 2013 SeongTae Jeong
 This source is subject to the Microsoft Public License (Ms-PL)
 
 ﻿Microsoft Public License (Ms-PL)

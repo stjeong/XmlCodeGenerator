@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlCodeGenerator", "XmlCode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSample", "Sample\BasicSample\BasicSample.csproj", "{5CE76AC7-3DBF-459D-A4B0-B495406F6CB2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{035CE61F-2E61-4D31-AB17-D112F104A385}"
+	ProjectSection(SolutionItems) = preProject
+		lib\Microsoft.VisualStudio.Shell.11.0.dll = lib\Microsoft.VisualStudio.Shell.11.0.dll
+		lib\Microsoft.VisualStudio.TextTemplating.VSHost.11.0.dll = lib\Microsoft.VisualStudio.TextTemplating.VSHost.11.0.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +41,9 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5CE76AC7-3DBF-459D-A4B0-B495406F6CB2} = {C6A0F6E1-0C61-4D8B-97D9-ED4175B839C5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {894A97C0-11D8-42A0-A87F-56A0D0B7AF09}
 	EndGlobalSection
 	GlobalSection(CodealikeProperties) = postSolution
 		SolutionGuid = 24cb72a6-a712-44f9-aeca-ba49f77b2904
