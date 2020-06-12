@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+    <metadata>
+        <id>XmlSrcGenerator</id>
+        <title>C# Source Generator with XML + XSLT</title>
+        <version>1.0.5</version>
+        <authors>SeongTae Jeong</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>C# Source Generator with XML + XSLT (same as https://marketplace.visualstudio.com/items?itemName=SeongTaeJeong.XmlCodeGenerator)</description>
+        <tags>Analyzers CSharp xml xslt</tags>
+        <projectUrl>https://github.com/stjeong/XmlCodeGenerator</projectUrl>
+        <license type="expression">MIT</license>
+        <developmentDependency>true</developmentDependency>
+    </metadata>
+</package>

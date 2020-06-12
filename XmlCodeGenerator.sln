@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F5CA69FE-6A86-4EB4-9909-047EA1988DE4}"
 	ProjectSection(SolutionItems) = preProject
+		getNugetVersion.ps1 = getNugetVersion.ps1
 		introduce.txt = introduce.txt
+		readFile.ps1 = readFile.ps1
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -14,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlCodeGenerator", "XmlCodeGenerator\XmlCodeGenerator.csproj", "{622F3DB9-67C7-4E31-86CD-F4C2F3865E3D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSample", "Sample\BasicSample\BasicSample.csproj", "{5CE76AC7-3DBF-459D-A4B0-B495406F6CB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlSrcGenerator", "XmlSrcGenerator\XmlSrcGenerator.csproj", "{EBDC7EC1-98F0-4E58-B97A-3EBCE9CBF42B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,12 +33,19 @@ Global
 		{5CE76AC7-3DBF-459D-A4B0-B495406F6CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CE76AC7-3DBF-459D-A4B0-B495406F6CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CE76AC7-3DBF-459D-A4B0-B495406F6CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDC7EC1-98F0-4E58-B97A-3EBCE9CBF42B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDC7EC1-98F0-4E58-B97A-3EBCE9CBF42B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDC7EC1-98F0-4E58-B97A-3EBCE9CBF42B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDC7EC1-98F0-4E58-B97A-3EBCE9CBF42B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5CE76AC7-3DBF-459D-A4B0-B495406F6CB2} = {C6A0F6E1-0C61-4D8B-97D9-ED4175B839C5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {16F1CD25-1514-45B6-BE63-FDC7F92EA218}
 	EndGlobalSection
 	GlobalSection(CodealikeProperties) = postSolution
 		SolutionGuid = 24cb72a6-a712-44f9-aeca-ba49f77b2904
