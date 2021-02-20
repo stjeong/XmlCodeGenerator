@@ -19,11 +19,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSample", "Sample\Basic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{035CE61F-2E61-4D31-AB17-D112F104A385}"
 	ProjectSection(SolutionItems) = preProject
+		lib\Microsoft.VisualStudio.CommandBars.dll = lib\Microsoft.VisualStudio.CommandBars.dll
 		lib\Microsoft.VisualStudio.Shell.11.0.dll = lib\Microsoft.VisualStudio.Shell.11.0.dll
 		lib\Microsoft.VisualStudio.TextTemplating.VSHost.11.0.dll = lib\Microsoft.VisualStudio.TextTemplating.VSHost.11.0.dll
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlSrcGenerator", "XmlSrcGenerator\XmlSrcGenerator.csproj", "{EBDC7EC1-98F0-4E58-B97A-3EBCE9CBF42B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlSrcGenerator", "XmlSrcGenerator\XmlSrcGenerator.csproj", "{EBDC7EC1-98F0-4E58-B97A-3EBCE9CBF42B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +50,9 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5CE76AC7-3DBF-459D-A4B0-B495406F6CB2} = {C6A0F6E1-0C61-4D8B-97D9-ED4175B839C5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E62A0BFD-1E40-48A5-A2F5-519FED6A656E}
 	EndGlobalSection
 	GlobalSection(CodealikeProperties) = postSolution
 		SolutionGuid = 24cb72a6-a712-44f9-aeca-ba49f77b2904
