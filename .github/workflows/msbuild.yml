@@ -27,6 +27,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Decrypt snk
+      run: gpg --quiet --batch --yes --decrypt --passphrase="${{ secrets.SNKFILE_DEC_KEY }}" --output ../SeongTaeJeong.snk ./SeongTaeJeong.snk.gpg
 
     - name: Add MSBuild to PATH
       uses: microsoft/setup-msbuild@v1
