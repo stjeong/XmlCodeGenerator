@@ -3,7 +3,7 @@
     <metadata>
         <id>XmlSrcGenerator</id>
         <title>C# Source Generator with XML + XSLT</title>
-        <version>1.0.7</version>
+        <version>1.0.8</version>
         <authors>SeongTae Jeong</authors>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>C# Source Generator with XML + XSLT (same as https://marketplace.visualstudio.com/items?itemName=SeongTaeJeong.XmlCodeGenerator)</description>
