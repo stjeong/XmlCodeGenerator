@@ -51,7 +51,8 @@ jobs:
           
   build:
     runs-on: windows-latest
-
+    needs: create_release
+    
     steps:
     - uses: actions/checkout@v2
     - name: Decrypt snk
