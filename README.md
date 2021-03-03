@@ -1,5 +1,5 @@
 ![MSBuild](https://github.com/stjeong/XmlCodeGenerator/workflows/MSBuild/badge.svg)
-![GitHub](https://img.shields.io/github/license/stjeong/XmlCodeGenerator)
+![GitHub](https://img.shields.io/badge/license-Ms--PL-lightgrey)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/stjeong/XmlCodeGenerator)
 
 What is it?
