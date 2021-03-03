@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="b9a2f630-ec32-49a5-96a9-612bcb1d25e4" Version="1.3" Language="en-US" Publisher="www.sysnet.pe.kr" />
+        <Identity Id="b9a2f630-ec32-49a5-96a9-612bcb1d25e4" Version="1.3.1" Language="en-US" Publisher="www.sysnet.pe.kr" />
         <DisplayName>XmlCodeGenerator</DisplayName>
         <Description xml:space="preserve">Auto-generates source code with XML + XSLT</Description>
         <MoreInfo>https://github.com/stjeong/XmlCodeGenerator</MoreInfo>
