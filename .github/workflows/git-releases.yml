@@ -98,6 +98,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ needs.create_release.outputs.upload_url }}
-        asset_path: ${{ steps.pub_nuget.outputs.package_path }}
-        asset_name: ${{ steps.pub_nuget.outputs.package_name }}
+        asset_path: ${{ steps.pub_nuget.outputs.PACKAGE_PATH }}
+        asset_name: ${{ steps.pub_nuget.outputs.PACKAGE_NAME }}
         asset_content_type: application/octet-stream
