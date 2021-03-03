@@ -72,13 +72,16 @@ jobs:
       run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
       
     - name: Publish NuGet
+      id: pub_nuget
       uses: brandedoutcast/publish-nuget@v2.5.5
       with:
         PROJECT_FILE_PATH: ./XmlSrcGenerator/XmlSrcGenerator.csproj
-        NUGET_KEY: ${{secrets.NUGET_API_KEY}}      
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}} 
+        TAG_COMMIT: false
+        INCLUDE_SYMBOLS: true
       
-    - name: Upload Release Asset
-      id: upload-release-asset
+    - name: Upload VSIX Release Asset
+      id: upload-vsix-release-asset
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -86,4 +89,15 @@ jobs:
         upload_url: ${{ needs.create_release.outputs.upload_url }}
         asset_path: ./XmlCodeGenerator/bin/${{env.BUILD_CONFIGURATION}}/XmlCodeGenerator.vsix
         asset_name: XmlCodeGenerator.vsix
+        asset_content_type: application/octet-stream
+
+    - name: Upload Nuget Release Asset
+      id: upload-nuget-release-asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.create_release.outputs.upload_url }}
+        asset_path: ./XmlCodeGenerator/XmlSrcGenerator.${{ steps.pub_nuget.outputs.version }}.nupkg
+        asset_name: XmlSrcGenerator.${{ steps.pub_nuget.outputs.version }}.nupkg
         asset_content_type: application/octet-stream
