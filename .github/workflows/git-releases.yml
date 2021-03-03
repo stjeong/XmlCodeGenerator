@@ -98,6 +98,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ needs.create_release.outputs.upload_url }}
-        asset_path: ./XmlCodeGenerator/XmlSrcGenerator.${{ steps.pub_nuget.outputs.version }}.nupkg
-        asset_name: XmlSrcGenerator.${{ steps.pub_nuget.outputs.version }}.nupkg
+        asset_path: ${{ steps.pub_nuget.outputs.package_path }}
+        asset_name: ${{ steps.pub_nuget.outputs.package_name }}
         asset_content_type: application/octet-stream
