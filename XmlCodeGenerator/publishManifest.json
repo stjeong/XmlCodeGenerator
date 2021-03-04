@@ -4,16 +4,11 @@
         "coding"
     ],
     "identity": {
-        "internalName": "XmlCodeGenerator",
-        "displayName": "XmlCodeGenerator",
-        "description": "Auto-generates source code with XML + XSLT",
-        "tags": [ "Code Generator" ],
-        "vsixId": "b9a2f630-ec32-49a5-96a9-612bcb1d25e4"
-
+        "internalName": "XmlCodeGenerator"
     },
     "overview": "overview.md",
     "priceCategory": "free",
-    "publisher": "SeongTae Jeong",
+    "publisher": "SeongTaeJeong",
     "private": false,
     "qna": true,
     "repo": "https://github.com/stjeong/XmlCodeGenerator"
