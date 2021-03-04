@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json.schemastore.org/vsix-publish",
+    "categories": [
+        "coding"
+    ],
+    "identity": {
+        "internalName": "XmlCodeGenerator",
+        "displayName": "XmlCodeGenerator",
+        "description": "Auto-generates source code with XML + XSLT",
+        "tags": [ "Code Generator" ]
+
+    },
+    "overview": "overview.md",
+    "priceCategory": "free",
+    "publisher": "b9a2f630-ec32-49a5-96a9-612bcb1d25e4",
+    "private": false,
+    "qna": true,
+    "repo": "https://github.com/stjeong/XmlCodeGenerator"
+}
