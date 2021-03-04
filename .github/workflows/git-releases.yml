@@ -71,13 +71,20 @@ jobs:
       # See https://docs.microsoft.com/visualstudio/msbuild/msbuild-command-line-reference
       run: msbuild /m /p:Configuration=${{env.BUILD_CONFIGURATION}} ${{env.SOLUTION_FILE_PATH}}
       
-    - name: Publish to Visual Studio Marketplace
-      uses: HaaLeo/publish-vscode-extension@v0
+#    - name: Publish to Visual Studio Marketplace
+#      uses: HaaLeo/publish-vscode-extension@v0
+#      with:
+#        pat: ${{ secrets.VSGALLERY_API_KEY }}
+#        registryUrl: https://marketplace.visualstudio.com
+#        extensionFile: ./XmlCodeGenerator/bin/${{env.BUILD_CONFIGURATION}}/XmlCodeGenerator.vsix
+#        packagePath: ''
+        
+    - name: Publish extension to Marketplace
+      uses: cezarypiatek/VsixPublisherAction@0.2
       with:
-        pat: ${{ secrets.VSGALLERY_API_KEY }}
-        registryUrl: https://marketplace.visualstudio.com
-        extensionFile: ./XmlCodeGenerator/bin/${{env.BUILD_CONFIGURATION}}/XmlCodeGenerator.vsix
-        packagePath: ''
+        extension-file: ./XmlCodeGenerator/bin/${{env.BUILD_CONFIGURATION}}/XmlCodeGenerator.vsix
+        publish-manifest-file: ./XmlCodeGenerator/publishManifest.json
+        personal-access-code: ${{ secrets.VSGALLERY_API_KEY }}        
       
     - name: Publish NuGet
       id: pub_nuget
