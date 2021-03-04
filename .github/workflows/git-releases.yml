@@ -77,6 +77,7 @@ jobs:
         pat: ${{ secrets.VSGALLERY_API_KEY }}
         registryUrl: https://marketplace.visualstudio.com
         extensionFile: ./XmlCodeGenerator/bin/${{env.BUILD_CONFIGURATION}}/XmlCodeGenerator.vsix
+        packagePath: ''
       
     - name: Publish NuGet
       id: pub_nuget
