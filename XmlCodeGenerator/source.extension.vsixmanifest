@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="b9a2f630-ec32-49a5-96a9-612bcb1d25e4" Version="1.4" Language="en-US" Publisher="www.sysnet.pe.kr" />
+        <Identity Id="b9a2f630-ec32-49a5-96a9-612bcb1d25e4" Version="1.5" Language="en-US" Publisher="www.sysnet.pe.kr" />
         <DisplayName>XmlCodeGenerator</DisplayName>
         <Description xml:space="preserve">Auto-generates source code with XML + XSLT</Description>
         <MoreInfo>https://github.com/stjeong/XmlCodeGenerator</MoreInfo>
@@ -12,9 +12,11 @@
     <Installation InstalledByMsi="false">
         <InstallationTarget Version="[11.0,17.0)" Id="Microsoft.VisualStudio.Pro" />
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0, 18.0)">
-          <ProductArchitecture>amd64</ProductArchitecture>
+            <ProductArchitecture>amd64</ProductArchitecture>
         </InstallationTarget>
     </Installation>
+    <Assets>
+    </Assets>
     <Prerequisites>
         <Prerequisite Id="Microsoft.Net.ComponentGroup.TargetingPacks.Common" Version="[15.0,)" DisplayName=".NET Framework 4 – 4.6 development tools" />
     </Prerequisites>

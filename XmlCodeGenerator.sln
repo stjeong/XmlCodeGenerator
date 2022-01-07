@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30128.74
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F5CA69FE-6A86-4EB4-9909-047EA1988DE4}"
 	ProjectSection(SolutionItems) = preProject
@@ -20,9 +20,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSample", "Sample\Basic
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{035CE61F-2E61-4D31-AB17-D112F104A385}"
 	ProjectSection(SolutionItems) = preProject
-		lib\Microsoft.VisualStudio.CommandBars.dll = lib\Microsoft.VisualStudio.CommandBars.dll
-		lib\Microsoft.VisualStudio.Shell.11.0.dll = lib\Microsoft.VisualStudio.Shell.11.0.dll
-		lib\Microsoft.VisualStudio.TextTemplating.VSHost.11.0.dll = lib\Microsoft.VisualStudio.TextTemplating.VSHost.11.0.dll
+		lib\Microsoft.VisualStudio.Interop.dll = lib\Microsoft.VisualStudio.Interop.dll
+		lib\Microsoft.VisualStudio.OLE.Interop.dll = lib\Microsoft.VisualStudio.OLE.Interop.dll
+		lib\Microsoft.VisualStudio.Shell.15.0.dll = lib\Microsoft.VisualStudio.Shell.15.0.dll
+		lib\Microsoft.VisualStudio.Shell.Framework.dll = lib\Microsoft.VisualStudio.Shell.Framework.dll
+		lib\Microsoft.VisualStudio.TextTemplating.VSHost.dll = lib\Microsoft.VisualStudio.TextTemplating.VSHost.dll
+		lib\Microsoft.VisualStudio.Utilities.dll = lib\Microsoft.VisualStudio.Utilities.dll
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XmlSrcGenerator", "XmlSrcGenerator\XmlSrcGenerator.csproj", "{EBDC7EC1-98F0-4E58-B97A-3EBCE9CBF42B}"

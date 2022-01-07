@@ -10,7 +10,7 @@ namespace macroTest
     {
         public void DoTest(int condition)
         {
-            DoIt(condition);
+          //  DoIt(condition);
         }
 
         void funcName_1()

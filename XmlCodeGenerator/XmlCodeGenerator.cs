@@ -13,11 +13,28 @@ using System.Runtime.Remoting;
 using System.Text;
 using System.Xml;
 using System.Collections.Generic;
-using Microsoft.VisualStudio.TextTemplating.VSHost;
 using Microsoft.VisualStudio.Shell;
-using VSLangProj80;
 using System.CodeDom.Compiler;
 using Microsoft.VisualStudio.Shell.Interop;
+using Microsoft.VisualStudio.Designer.Interfaces;
+using Microsoft.VisualStudio.TextTemplating.VSHost;
+
+[Guid("0FECB64A-8779-4A7B-B7CD-226DD6531FB1")]
+public abstract class vsContextGuids
+{
+    [MarshalAs(UnmanagedType.LPStr)]
+    public const string vsContextGuidVCSProject = "{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC}";
+    [MarshalAs(UnmanagedType.LPStr)]
+    public const string vsContextGuidVCSEditor = "{694DD9B6-B865-4C5B-AD85-86356E9C88DC}";
+    [MarshalAs(UnmanagedType.LPStr)]
+    public const string vsContextGuidVBProject = "{164B10B9-B200-11D0-8C61-00A0C91E29D5}";
+    [MarshalAs(UnmanagedType.LPStr)]
+    public const string vsContextGuidVBEditor = "{E34ACDC0-BAAE-11D0-88BF-00A0C9110049}";
+    [MarshalAs(UnmanagedType.LPStr)]
+    public const string vsContextGuidVJSProject = "{E6FDF8B0-F3D1-11D4-8576-0002A516ECE8}";
+    [MarshalAs(UnmanagedType.LPStr)]
+    public const string vsContextGuidVJSEditor = "{E6FDF88A-F3D1-11D4-8576-0002A516ECE8}";
+}
 
 namespace BclExtension
 {
@@ -228,8 +245,8 @@ namespace BclExtension
             if (codeDomProvider == null)
             {
                 // Query for IVSMDCodeDomProvider/SVSMDCodeDomProvider for this project type
-                Microsoft.VisualStudio.Designer.Interfaces.IVSMDCodeDomProvider provider = GetService(typeof(SVSMDCodeDomProvider))
-                    as Microsoft.VisualStudio.Designer.Interfaces.IVSMDCodeDomProvider;
+                IVSMDCodeDomProvider provider = GetService(typeof(SVSMDCodeDomProvider))
+                    as IVSMDCodeDomProvider;
 
                 if (provider != null)
                 {
@@ -243,115 +260,6 @@ namespace BclExtension
             }
             return codeDomProvider;
         }
-
-
-        //private static void LoadXsltExtensionMethod(XsltArgumentList xal)
-        //{
-        //    // 지정된 레지스트리에 등록된 Xslt Extension 메서드 목록을 반환.
-        //    string regPath = XmlCodeGenerator.CodeGeneratorRegistryPath;
-
-        //    using (RegistryKey baseKey = Registry.LocalMachine.OpenSubKey(regPath))
-        //    {
-        //        string[] subKeyNames = baseKey.GetSubKeyNames();
-        //        foreach (string subKeyName in subKeyNames)
-        //        {
-        //            Trace.WriteLine(subKeyName);
-
-        //            using (RegistryKey subKey = baseKey.OpenSubKey(subKeyName))
-        //            {
-        //                string extensionPath = Convert.ToString(subKey.GetValue("Path"));
-        //                Trace.WriteLine("==> " + extensionPath);
-
-        //                Assembly extensionAssembly = Assembly.LoadFrom(extensionPath);
-        //                foreach (Type type in extensionAssembly.GetTypes())
-        //                {
-        //                    Type extensionInterface = type.GetInterface(typeof(IXmlCodeGenExtension).Name);
-        //                    if (extensionInterface == null)
-        //                    {
-        //                        continue;
-        //                    }
-
-        //                    Trace.WriteLine("Extension Type: " + type.FullName);
-        //                    IXmlCodeGenExtension extension = extensionAssembly.CreateInstance(type.FullName) as IXmlCodeGenExtension;
-        //                    extension.AddExtensionObject(xal);
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-
     }
 }
 
-
-/*
-
- *       AppDomain newDomain = null;
-
-      string filePath = string.Empty;
-
-      try
-      {
-        newDomain = AppDomain.CreateDomain(Guid.NewGuid().ToString());
-
-        string thisAssemblyFileName = this.GetType().Assembly.Location;
-        string path = Path.GetDirectoryName(thisAssemblyFileName);
-        string dllPath = Path.Combine(path, "SeparatedCodeGenerator.dll");
-        Debug.WriteLine(dllPath);
-
-        ObjectHandle objHandle = newDomain.CreateInstanceFrom(dllPath, "BclExtension.XmlCodeGenerator");
-
-        object objTarget = objHandle.Unwrap();
-        if (objTarget == null)
-        {
-          Debug.WriteLine("objTarget == null");
-        }
-        else
-        {
-          Debug.WriteLine("objTarget != null");
-        }
-        Debug.WriteLine("GetHashCode == " + objTarget.GetHashCode());
-
-        Type type = objTarget.GetType();
-
-        Debug.WriteLine(type.FullName);
-        Debug.WriteLine(type.BaseType.FullName);
-        Debug.WriteLine("MemberInfo member in type.GetMembers");
-        foreach (MemberInfo member in type.GetMembers())
-        {
-          Debug.WriteLine(member.Name);
-        }
-
-        Debug.WriteLine("Type itype in type.GetInterfaces");
-        foreach (Type itype in type.GetInterfaces())
-        {
-          Debug.WriteLine(itype.FullName);
-        }
-
-        IXmlCodeGenerator codeGen = objTarget as IXmlCodeGenerator;
-        if (codeGen == null)
-        {
-          Debug.WriteLine("codeGen == null");
-        }
-        else
-        {
-          Debug.WriteLine("codeGen != null");
-        }
-        Debug.WriteLine("TEST");
-        string txt = codeGen.GenerateCode(dllPath);
-        Debug.WriteLine("TEST-7");
-
-        return System.Text.Encoding.UTF8.GetBytes(txt);
-      }
-      finally
-      {
-        if (newDomain != null)
-        {
-          AppDomain.Unload(newDomain);
-          newDomain = null;
-        }
-      }
-
-
-
-*/
