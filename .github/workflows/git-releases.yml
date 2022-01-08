@@ -50,7 +50,7 @@ jobs:
           prerelease: false
           
   build:
-    runs-on: windows-latest
+    runs-on: windows-2022
     needs: create_release
     
     steps:
